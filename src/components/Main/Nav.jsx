@@ -36,7 +36,7 @@ export function NavPages() {
     <div className="main__nav">
       <NavLink
         className={cn({ 'active-page': page == 1 })}
-        to={`/${page - 1}`}
+        to={`test-project/${page - 1}`}
         onClick={() => page >= 2 && onPrev()}>
         <p>Назад</p>
       </NavLink>
@@ -51,7 +51,7 @@ export function NavPages() {
       </div>
       <NavLink
         className={cn({ 'active-page': page == totalPages.length })}
-        to={`/${+page + 1}`}
+        to={`test-project/${+page + 1}`}
         onClick={onNext}>
         <p>Далее</p>
       </NavLink>

@@ -13,8 +13,8 @@ export function Main() {
     <main className="main">
       <Table />
       <Routes>
-        <Route path="/" element={<ListItem />} />
-        <Route path="/:id" element={<ListItem />} />
+        <Route path="test-project" element={<ListItem />} />
+        <Route path="test-project/:id" element={<ListItem />} />
       </Routes>
       <NavPages />
     </main>
