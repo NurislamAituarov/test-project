@@ -11,9 +11,11 @@ export function NavPages() {
   const [totalPages, setTotalPages] = useState(pages);
 
   useEffect(() => {
-    const num = Math.ceil(filterItems.length / 10);
-    const newArr = pages.slice(0, num);
-    setTotalPages(newArr);
+    if (value !== '') {
+      const num = Math.ceil(filterItems.length / 10);
+      const newArr = pages.slice(0, num);
+      setTotalPages(newArr);
+    }
   }, [value]);
 
   useEffect(() => {
