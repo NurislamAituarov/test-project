@@ -2,6 +2,7 @@ const initialState = {
   listItems: [],
   pageActive: 1,
   filterItems: [],
+  value: '',
 };
 
 export default function Reducer(state = initialState, action) {
@@ -24,6 +25,7 @@ export default function Reducer(state = initialState, action) {
       });
       return {
         ...state,
+        value: action.payload,
         filterItems: action.payload ? newArr : state.listItems,
       };
     case 'FILTER':

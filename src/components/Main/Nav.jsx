@@ -6,9 +6,15 @@ import cn from 'classnames';
 const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 export function NavPages() {
-  const { pageActive, filterItems } = useSelector((state) => state);
+  const { pageActive, filterItems, value } = useSelector((state) => state);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(pages);
+
+  useEffect(() => {
+    const num = Math.ceil(filterItems.length / 10);
+    const newArr = pages.slice(0, num);
+    setTotalPages(newArr);
+  }, [value]);
 
   useEffect(() => {
     if (!pageActive) {
@@ -20,9 +26,6 @@ export function NavPages() {
 
   function onNext() {
     setPage((page) => +page + 1);
-    const num = Math.ceil(filterItems.length / 10);
-    const newArr = pages.slice(0, num);
-    setTotalPages(newArr);
   }
 
   function onPrev() {
