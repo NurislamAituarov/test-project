@@ -1,0 +1,145 @@
+.main {
+  // height: 100%;
+}
+
+.main__table {
+  background-color: #474955;
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  .colum {
+    color: white;
+    padding: 19px 26px;
+    font-size: 14px;
+    line-height: 19px;
+    cursor: pointer;
+    strong {
+      margin-right: 40px;
+    }
+
+    &:active {
+      svg {
+        transition: 0.3s;
+        transform: translateY(10px);
+      }
+    }
+  }
+  .id {
+    //   width: 110px;
+  }
+  .title {
+    position: relative;
+    padding-left: 140px;
+  }
+  .subtitle {
+    padding-left: 140px;
+  }
+}
+
+.main__list {
+  display: grid;
+  grid-template-columns: 120px 1fr 1fr;
+  color: #474955;
+  .main__list-item {
+    padding: 15px;
+    border: 1px solid #e3e6ec;
+  }
+  .main__list-title {
+    display: flex;
+    align-items: center;
+  }
+  .main__list-subtitle {
+    display: flex;
+    align-items: center;
+  }
+  .main__list-id {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main__nav {
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 60px 12px 60px;
+  a {
+    text-decoration: none;
+  }
+  p {
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 500;
+    color: #474955;
+    cursor: pointer;
+  }
+
+  .main__nav-page {
+    width: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-right: 10px;
+      font-style: italic;
+    }
+    ._active {
+      color: #7ebc3c;
+    }
+  }
+  .active-page {
+    // visibility: hidden;
+    pointer-events: none;
+    cursor: none;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__table {
+    grid-template-columns: 80px 1fr 1fr;
+    .colum {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .id {
+      padding: 15px;
+
+      strong {
+        margin-right: 15px;
+      }
+    }
+    .title {
+      padding-left: 0px;
+    }
+    .subtitle {
+      padding-left: 0px;
+    }
+  }
+  .main__list {
+    grid-template-columns: 80px 1fr 1fr;
+  }
+}
+
+@media (max-width: 468px) {
+  .main__table {
+    .title {
+      strong {
+        margin-right: 10px;
+      }
+    }
+    .subtitle {
+      strong {
+        margin-right: 10px;
+      }
+    }
+  }
+}

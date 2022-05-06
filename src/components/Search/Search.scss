@@ -1,0 +1,32 @@
+.container__search {
+  margin-bottom: 15px;
+}
+
+.search {
+  max-width: 631px;
+  padding: 18px 26px;
+  background-color: #5a5c66;
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    input {
+      width: 100%;
+      background: none;
+      outline: none;
+      border: none;
+      font-size: 16px;
+      color: white;
+    }
+    ::-webkit-input-placeholder {
+      color: #b2b7bf;
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 400;
+    }
+    svg {
+      cursor: pointer;
+    }
+  }
+}
